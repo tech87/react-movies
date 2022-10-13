@@ -1,0 +1,25 @@
+{
+  "movies": [
+    {
+      "title": "Pulp fiction",
+      "director": "Quentin Tarantino",
+      "runTime": 154,
+      "wonOscar": true,
+      "summary": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "cast": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
+      "genre": ["crime", "drama"],
+      "poster": "https://doublefeature.fm/images/covers/pulp-fiction.jpg"
+    },
+    {
+      "title": "Be cool",
+      "director": "F. Gary Gray",
+      "runTime": 118,
+      "wonOscar": false,
+      "summary":
+        "Disenchanted with the movie industry, Chili Palmer tries the music industry, meeting and romancing a widow of a music executive on the way.",
+      "cast": ["John Travolta", "Uma Thurman", "Dwayne Johnson"],
+      "genre": ["comedy", "crime", "music"],
+      "poster": "https://www.new-video.de/co/becool-ft.jpg"
+    }
+  ]
+}
