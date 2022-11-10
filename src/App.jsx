@@ -1,9 +1,16 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  useEffect(()=> {
+    fetch('http://localhost:3000/movies/1')
+      .then(res=> res.json())
+      .then(data=> console.log(data))
+  }, [])
+
 
   return (
     <div className="App">
