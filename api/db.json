@@ -53,16 +53,17 @@
     },
     {
       "id": 5,
-      "title": "The Shawshank Redemption",
-      "director": "Frank Darabont",
-      "runTime": 142,
-      "wonOscar": false,
+      "title": "Mystic River",
+      "director": "Mystic River",
+      "runTime": 138,
+      "wonOscar": true,
       "summary":
-        "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-      "cast": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
+        "The lives of three men who were childhood friends are shattered when one of them has a family tragedy.",
+      "cast": ["Tim Robbins", "Sean Penn", "Kevin Bacon"],
       "genre": ["drama"],
-      "rating": 9.3,
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg"
+      "rating": 7.9,
+      "poster": "https://www.themoviedb.org/t/p/original/1tyi6RZzbJ9bE0g0GUf6Q7BWLvv.jpg",
+      "trailer": "https://www.youtube.com/embed/s7EdQ4FqbhY"
     },
     {
       "id": 6,
