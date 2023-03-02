@@ -1,10 +1,11 @@
 import React from 'react'
+import {Link, Outlet} from "react-router-dom"
 
 function Header() {
   return (
     <header>
-     <i class="ri-movie-2-fill"></i>
-     <i class="ri-file-list-fill"></i>
+     <Link to="/" className='movieLogo'><i className="ri-movie-2-fill"></i></Link>
+     <Link to="/favorites" className='movieList'><i className="ri-file-list-fill"></i></Link>
     </header>
   )
 }
