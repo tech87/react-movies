@@ -1,6 +1,7 @@
 import {  useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Modal from "./Modal";
+import { motion } from "framer-motion"
 
 
 export default function MovieDetails() {
@@ -9,7 +10,7 @@ const [movie, setMovie] = useState({})
 const [isOpen, setIsOpen] = useState(false)
 const [movieReview, setMovieReview] = useState('')
 const [reviews, setReviews] = useState([]) 
-//const [isReviewSentToDB, setIsReviewSentToDB] = useState(false)
+
 
     useEffect(()=> {
         fetch(`http://localhost:3000/movies/${movieId}`)
@@ -35,7 +36,6 @@ const [reviews, setReviews] = useState([])
 
     const submitHandler = e => {
         e.preventDefault();
-        console.log(reviews)
       fetch(`http://localhost:3000/movies/${movieId}`, {
           method: "PATCH",
           mode: "cors",
@@ -46,16 +46,14 @@ const [reviews, setReviews] = useState([])
             reviews: [movieReview, ...reviews]
           })
         })
-          //.then(() => setIsReviewSentToDB(prevState => !prevState) setReviews([movieReview, ...movie.reviews]))
           .then(() => setReviews(prevState => {
             return [movieReview, ...prevState]
           }))
-          .then(()=> console.log(reviews))
           .then(() => setMovieReview(''))
     }
 
     const deleteReview = (review) => {
-      const reviewToKeep = movie.reviews.filter(text => text !== review)
+      const reviewToKeep = reviews.filter(text => text !== review)
       fetch(`http://localhost:3000/movies/${movieId}`, {
         method: "PATCH",
         mode: "cors",
@@ -70,7 +68,12 @@ const [reviews, setReviews] = useState([])
     }
 
       return (
-        <div className="details-page">
+        <motion.div className="details-page"
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1  }}
+        transition={{ duration: 1.5 }}
+        exit={{ opacity: 0}}
+        >
           <div className="details">
             <div className="poster-container">
               <img src={movie.poster} className="detail-img" />
@@ -140,6 +143,6 @@ const [reviews, setReviews] = useState([])
              )
                      : null} 
           </div>
-        </div>
+        </motion.div>
       );
 }

@@ -15,6 +15,7 @@ html, body {
 
 
 header {
+  position: relative;
   width: 100vw;
   padding: 15px 0;
   background-color: #232946;
@@ -67,7 +68,6 @@ header {
   width: 100%;
   max-width: 100%;
   max-height: 100%; 
-  /* object-fit: cover; */
   transition: all 1s ease-in-out;
 }
 
@@ -258,6 +258,57 @@ h1 {
   font-size: 3em;
 } 
 
+.filter {
+  position: fixed;
+  top: 2px;
+  width: 450px;
+  height: 70px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 10;
+}
+input {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+.searchContainer {
+  position: relative;
+}
+
+.searchContainer input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.searchContainer button {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+}
+::placeholder {
+  text-indent: 30px;
+  color: #232946;
+}
+.movie-genre {
+  font-size: 1.2em;
+  color: #fffffe;
+}
+select {
+  padding: 7px 5px;
+  border: none;
+  border-radius: 5px;
+}
+option {
+  color: #232946;
+  margin-left: 0.5em;
+}
 .poster-container {
   width: 400px;
   height: 450px;
@@ -417,6 +468,7 @@ h4 {
 /* For extremely small screen devices (595px and below) */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .movie-elements {
+    margin-top: 150px;
     grid-template-columns: 350px;
     grid-gap: 2em 2em;
   }
@@ -443,6 +495,30 @@ h4 {
     align-items: center;
   }
   
+  .filter {
+    width: 100vw;
+    top: 70px;
+    height: 75px;
+    background-color: #b8c1ec;
+    border-radius: 0px;
+    border-bottom: 1px solid #8b96ce;
+    justify-content: center;
+  }
+
+  input {
+    width: 100px;
+    margin-right: 10px;
+  }
+
+  select {
+    padding: 7px 3px;
+  }
+
+  .movie-genre {
+    color: #232946;
+    opacity: .6;
+  }
+
   .review-container {
     width: 100%;
     padding: 0 1em;
@@ -495,6 +571,7 @@ h4 {
 /* Small screen devices (600px and above) */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .movie-elements {
+    margin-top: 150px;
     grid-template-columns: 350px;
     grid-gap: 2em 2em;
   }
@@ -519,6 +596,30 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .filter {
+    width: 100vw;
+    top: 70px;
+    height: 75px;
+    background-color: #b8c1ec;
+    border-radius: 0px;
+    border-bottom: 1px solid #8b96ce;
+    justify-content: center;
+  }
+
+  input {
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  select {
+    padding: 7px 3px;
+  }
+
+  .movie-genre {
+    color: #232946;
+    opacity: .6;
   }
   
   .review-container {

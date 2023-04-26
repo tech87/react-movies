@@ -10,6 +10,7 @@ import MovieList from './components/MovieList';
 import './index.css'
 import Root from './routes/Root';
 import MovieDetails from './components/MovieDetails'
+import Favorites from './components/Favorites';
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
        {
         path: "/:movieId",
         element: <MovieDetails />
+      }, 
+      {
+        path: "/favorites",
+        element: <Favorites />
       }, 
     ],
   },

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom"
+import { motion } from "framer-motion";
 
 
 function Movies(props) {
@@ -7,7 +8,12 @@ function Movies(props) {
     const filledHeart = "ri-heart-fill"
     const emptyHeart = "ri-heart-line"
     return(
-        <div className="movie-container">
+        <motion.div className="movie-container" 
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: 1  }}
+          transition={{ duration: 1.5 }}
+          exit={{ opacity: 0}}
+        >
                 <i className={hovered ? filledHeart : emptyHeart}
                     onMouseEnter={()=> setHovered(true)}
                     onMouseLeave={()=> setHovered(false)}>
@@ -21,7 +27,7 @@ function Movies(props) {
                         <i className="ri-star-s-fill"></i>
                         <p className="movie-rating">{props.movie.rating} / 10</p>
                 </div>
-        </div>
+        </motion.div>
     )
 }
 

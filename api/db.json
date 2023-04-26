@@ -19,9 +19,7 @@
       "year": 1994,
       "poster": "./movie photos/pulpFiction.jpg",
       "trailerId": "tGpTpVyI_OQ",
-      "reviews": [
-        "3"
-      ]
+      "reviews": []
     },
     {
       "id": 2,
@@ -41,9 +39,7 @@
       "rating": 8.3,
       "poster": "./movie photos/heat.jpg",
       "trailerId": "14oNcFxiVaQ",
-      "reviews": [
-        "best movie ever"
-      ]
+      "reviews": []
     },
     {
       "id": 3,
