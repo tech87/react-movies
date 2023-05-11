@@ -30,7 +30,7 @@ header {
 }
 .movie-elements {
    margin-top: 100px;
-   width: 100vw;
+   width: calc(100vw - 20px);
    display: grid;
    justify-content: center;
    grid-gap: 3rem;
@@ -67,7 +67,7 @@ header {
  .img-container .poster {
   width: 100%;
   max-width: 100%;
-  max-height: 100%; 
+  max-height: 100%;
   transition: all 1s ease-in-out;
 }
 
@@ -114,7 +114,7 @@ header {
 .btn:hover {
   cursor: pointer;
   color: #232946;
-}  
+}
 
 .ri-heart-line, .ri-heart-fill {
   grid-row: 4;
@@ -153,7 +153,7 @@ header {
 /*Movie Details Page*/
 
  #root {
-  width: 100vw;  
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,7 +256,7 @@ form {
 
 h1 {
   font-size: 3em;
-} 
+}
 
 .filter {
   position: fixed;
@@ -278,19 +278,25 @@ input {
 
 .searchContainer {
   position: relative;
+  width: 200px;
 }
 
 .searchContainer input {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
+  background-color: #fff;
+  color: #171717;
+  line-height: 1.4;
 }
 
 .searchContainer button {
+  appearance: none;
+  background-color: transparent;
+  color: #171717;
+  margin: 0;
+  padding: 2px 0;
+  line-height: 1.4;
   position: absolute;
   z-index: 2;
-  right: 0;
+  right: 6px;
 }
 ::placeholder {
   text-indent: 30px;
@@ -333,7 +339,7 @@ option {
   width: 100%;
   max-width: 100%;
   max-height: 100%;
-} 
+}
 
 .about {
   grid-row: 2;
@@ -358,7 +364,7 @@ option {
   border-radius: 1rem;
   margin-left: 50px;
   margin-right: 50px;
-} 
+}
 .trailer:hover {
   cursor: pointer;
   background-color: #b8c1ec;
@@ -393,7 +399,7 @@ li {
   flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
-} 
+}
 
 h4 {
   font-weight: bold;
@@ -425,7 +431,7 @@ h4 {
   color: #b8c1ec;
   cursor: pointer;
 }
- 
+
 /* Modal */
 
 .overlay {
@@ -481,12 +487,12 @@ h4 {
     display: grid;
     grid-template:  5em 325px 30px 450px auto / 2em 250px 2em;
     justify-content: center;
-  } 
+  }
   .info {
     display: flex;
     justify-content: space-between;
   }
-  
+
   .reviews {
     width: 400px;
     padding: 3em 2em;
@@ -494,7 +500,7 @@ h4 {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .filter {
     width: 100vw;
     top: 70px;
@@ -528,7 +534,7 @@ h4 {
     justify-content: space-around;
     align-items: center;
   }
-   
+
   .poster-container {
     width: 250px;
     height: 325px;
@@ -538,7 +544,7 @@ h4 {
     z-index: 1;
     align-self: center;
   }
-  
+
   .poster-container::before {
     content: "";
     position: absolute;
@@ -549,12 +555,12 @@ h4 {
     outline: .5rem solid #232946;
     z-index: -1;
   }
-  
+
    .detail-img {
     width: 100%;
     max-width: 100%;
     max-height: 100%;
-  } 
+  }
   .hr-styled {
     width: 90%;
     margin: 0 auto;
@@ -584,12 +590,12 @@ h4 {
     display: grid;
     grid-template:  5em 350px 30px 450px auto / 2em 300px 2em;
     justify-content: center;
-  } 
+  }
   .info {
     display: flex;
     justify-content: space-between;
   }
-  
+
   .reviews {
     width: 500px;
     padding: 3em 2em;
@@ -621,7 +627,7 @@ h4 {
     color: #232946;
     opacity: .6;
   }
-  
+
   .review-container {
     width: 100%;
     padding: 0 1em;
@@ -631,7 +637,7 @@ h4 {
     justify-content: space-around;
     align-items: center;
   }
-   
+
   .poster-container {
     width: 300px;
     height: 350px;
@@ -641,7 +647,7 @@ h4 {
     z-index: 1;
     align-self: center;
   }
-  
+
   .poster-container::before {
     content: "";
     position: absolute;
@@ -652,12 +658,12 @@ h4 {
     outline: .5rem solid #232946;
     z-index: -1;
   }
-  
+
    .detail-img {
     width: 100%;
     max-width: 100%;
     max-height: 100%;
-  } 
+  }
   .hr-styled {
     width: 90%;
     margin: 0 auto;
@@ -686,12 +692,12 @@ h4 {
     display: grid;
     grid-template:  5em 400px 30px 450px auto / 2em 350px 2em;
     justify-content: center;
-  } 
+  }
   .info {
     display: flex;
     justify-content: space-between;
   }
-  
+
   .hr-styled {
     width: 90%;
     margin: 0 auto;
@@ -703,7 +709,7 @@ h4 {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .review-container {
     width: 100%;
     padding: 0 1em;
@@ -713,7 +719,7 @@ h4 {
     justify-content: space-around;
     align-items: center;
   }
-   
+
   .poster-container {
     width: 350px;
     height: 400px;
@@ -723,7 +729,7 @@ h4 {
     z-index: 1;
     align-self: center;
   }
-  
+
   .poster-container::before {
     content: "";
     position: absolute;
@@ -734,13 +740,13 @@ h4 {
     outline: .5rem solid #232946;
     z-index: -1;
   }
-  
+
    .detail-img {
     width: 100%;
     max-width: 100%;
     max-height: 100%;
-  } 
-  
+  }
+
   .about {
     grid-row: 4;
     grid-column: 1 / -1;
