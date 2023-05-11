@@ -19,6 +19,7 @@
       "year": 1994,
       "poster": "./movie photos/pulpFiction.jpg",
       "trailerId": "tGpTpVyI_OQ",
+      "isFavorite": true,
       "reviews": []
     },
     {
@@ -39,6 +40,7 @@
       "rating": 8.3,
       "poster": "./movie photos/heat.jpg",
       "trailerId": "14oNcFxiVaQ",
+      "isFavorite": true,
       "reviews": []
     },
     {
@@ -59,6 +61,7 @@
       "rating": 7.4,
       "poster": "./movie photos/LAW.jpg",
       "trailerId": "LX6kVRsdXW4",
+      "isFavorite": true,
       "reviews": []
     },
     {
@@ -79,6 +82,7 @@
       "rating": 7.3,
       "poster": "./movie photos/troy.jpg",
       "trailerId": "znTLzRJimeY",
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -99,6 +103,7 @@
       "rating": 7.9,
       "poster": "./movie photos/mystic.jpg",
       "trailerId": "W7NktJhrRYQ",
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -119,6 +124,7 @@
       "rating": 7.7,
       "poster": "./movie photos/oceans.jpg",
       "trailerId": "imm6OR605UI",
+      "isFavorite": false,
       "reviews": [
         "funny",
         "great movie"
@@ -142,6 +148,7 @@
       "rating": 9.2,
       "poster": "./movie photos/godfather.jpg",
       "trailerId": "UaVTIH8mujA",
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -162,6 +169,7 @@
       "rating": 7.6,
       "poster": "./movie photos/300.jpg",
       "trailerId": "UrIbxk7idYA",
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -182,6 +190,7 @@
       "rating": 8.7,
       "poster": "./movie photos/goodfellas.jpg",
       "trailerId": "2ilzidi_J8Q",
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -202,6 +211,7 @@
       "rating": 7,
       "poster": "./movie photos/wedding.jpg",
       "trailerId": "wKahFEgeRg8",
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -222,6 +232,7 @@
       "rating": 6.5,
       "poster": "./movie photos/olympus.jpg",
       "trailerId": "ar-IaAx7s8k",
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -242,6 +253,7 @@
       "rating": 7.3,
       "poster": "./movie photos/dumb.jpg",
       "trailerId": "l13yPhimE3o",
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -262,6 +274,7 @@
       "rating": 7.7,
       "poster": "./movie photos/hangover.jpg",
       "trailerId": "tcdUhdOlz9M",
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -282,6 +295,7 @@
       "rating": 5.6,
       "poster": "./movie photos/NS.jpg",
       "trailerId": "SgstaR60zNk",
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -302,6 +316,7 @@
       "rating": 7.7,
       "poster": "./movie photos/TD.jpg",
       "trailerId": "DXPJqRtkDP0",
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -322,6 +337,7 @@
       "rating": 8.6,
       "poster": "./movie photos/mile.jpg",
       "trailerId": "Ki4haFrqSrw",
+      "isFavorite": false,
       "reviews": []
     }
   ]

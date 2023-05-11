@@ -4,9 +4,23 @@ import { motion } from "framer-motion";
 
 
 function Movies(props) {
-    const [hovered, setHovered] = useState(false)
+    const [favorite, setFavorite] = useState(props.movie.isFavorite)
     const filledHeart = "ri-heart-fill"
     const emptyHeart = "ri-heart-line"
+
+    function handleFavorite() {
+         fetch(`http://localhost:3000/movies/${props.movie.id}`, {
+          method: "PATCH",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            isFavorite: !favorite
+          })
+        })
+          .then(() => setFavorite(!favorite))
+    }
     return(
         <motion.div className="movie-container" 
           initial={{ opacity: 0 }} 
@@ -14,9 +28,9 @@ function Movies(props) {
           transition={{ duration: 1.5 }}
           exit={{ opacity: 0}}
         >
-                <i className={hovered ? filledHeart : emptyHeart}
-                    onMouseEnter={()=> setHovered(true)}
-                    onMouseLeave={()=> setHovered(false)}>
+                <i className={favorite ? filledHeart : emptyHeart}
+                    onClick={handleFavorite}
+                >
                 </i>
                 <div className="img-container">
                         <img src={props.movie.poster} className="poster" loading="lazy"/>
