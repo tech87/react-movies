@@ -19,7 +19,7 @@
       "year": 1994,
       "poster": "./movie photos/pulpFiction.jpg",
       "trailerId": "tGpTpVyI_OQ",
-      "isFavorite": true,
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -40,7 +40,7 @@
       "rating": 8.3,
       "poster": "./movie photos/heat.jpg",
       "trailerId": "14oNcFxiVaQ",
-      "isFavorite": true,
+      "isFavorite": false,
       "reviews": []
     },
     {
@@ -61,7 +61,7 @@
       "rating": 7.4,
       "poster": "./movie photos/LAW.jpg",
       "trailerId": "LX6kVRsdXW4",
-      "isFavorite": true,
+      "isFavorite": false,
       "reviews": []
     },
     {

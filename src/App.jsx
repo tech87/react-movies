@@ -10,8 +10,7 @@ import FilterMovies from './components/FilterMovies'
 function App() {
   const [movies, setMovies] = useState([])
   const [searchField, setSearchField] = useState('')
-  const [filteredMovies, setFilteredMovies] = useState([])  // ?????? why?
-  /* const [isSearching, setIsSearching] = useState(false) */
+  const [filteredMovies, setFilteredMovies] = useState([])  
   
 
   useEffect(()=> {
@@ -19,13 +18,12 @@ function App() {
         .then(res=> res.json())
         .then(data=> {
           setMovies(data)
-          setFilteredMovies(data) // ?????? why?
+          setFilteredMovies(data) 
         })
 
     }, [])
 
-    const onSearchChange = (value) => {
-      /* setIsSearching(true) */
+    const onSearchChange = (value) => {     
       setSearchField(value)
       setFilteredMovies(movies.filter(movie => {
         return movie.title.toLowerCase().includes(value.toLowerCase())
@@ -33,7 +31,6 @@ function App() {
     }
     
       const onSelectChange = (value) => {
-        /* setIsSearching(true) */
          setFilteredMovies(movies.filter(movie => {
           return value === "reset" ? true : movie.genre.includes(value) 
          })) 
@@ -43,7 +40,7 @@ function App() {
    <>
       <FilterMovies onSearchChange={onSearchChange} onSelectChange={onSelectChange} searchField={searchField}/>
       <MovieList movies={filteredMovies} searchField={searchField}/>   
-     {/* isSearching && */ filteredMovies.length === 0 && <h2>Movie not found!</h2>}
+     {filteredMovies.length === 0 && <h2>Movie not found!</h2>}
    </>  
   )
 }

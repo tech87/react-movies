@@ -10,7 +10,7 @@ function Header() {
         transition={{duration: 1}}
     >
      <Link to="/" className='movieLogo'><i className="ri-movie-2-fill"></i></Link>
-     <Link to="/favorites" className='movieList'><i className="ri-file-list-fill"></i></Link>
+     <Link to="/favorites" className='movieList'><i className="ri-heart-fill fav-fill-heart"></i></Link>
     </motion.header>
   )
 }

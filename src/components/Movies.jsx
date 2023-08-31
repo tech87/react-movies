@@ -1,26 +1,16 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom"
 import { motion } from "framer-motion";
+import useFavoriteMovie from "./useFavoriteMovie";
 
 
 function Movies(props) {
-    const [favorite, setFavorite] = useState(props.movie.isFavorite)
+    /* const [favorite, handleFavorite] = useFavoriteMovie() */
+    const [favorite, ,updateFavorite] = useFavoriteMovie(props.movie.isFavorite)
     const filledHeart = "ri-heart-fill"
     const emptyHeart = "ri-heart-line"
 
-    function handleFavorite() {
-         fetch(`http://localhost:3000/movies/${props.movie.id}`, {
-          method: "PATCH",
-          mode: "cors",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            isFavorite: !favorite
-          })
-        })
-          .then(() => setFavorite(!favorite))
-    }
+
     return(
         <motion.div className="movie-container" 
           initial={{ opacity: 0 }} 
@@ -29,7 +19,7 @@ function Movies(props) {
           exit={{ opacity: 0}}
         >
                 <i className={favorite ? filledHeart : emptyHeart}
-                    onClick={handleFavorite}
+                    onClick={()=> updateFavorite(props.movie.id)}
                 >
                 </i>
                 <div className="img-container">

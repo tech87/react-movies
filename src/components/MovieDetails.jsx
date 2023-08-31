@@ -2,6 +2,7 @@ import {  useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Modal from "./Modal";
 import { motion } from "framer-motion"
+import useFavoriteMovie from "./useFavoriteMovie";
 
 
 export default function MovieDetails() {
@@ -10,17 +11,17 @@ const [movie, setMovie] = useState({})
 const [isOpen, setIsOpen] = useState(false)
 const [movieReview, setMovieReview] = useState('')
 const [reviews, setReviews] = useState([]) 
-
+const [favorite, setFavorite, updateFavorite] = useFavoriteMovie()
 
     useEffect(()=> {
         fetch(`http://localhost:3000/movies/${movieId}`)
           .then(res=> res.json())
           .then(data=> {
             setMovie(data);
-            setReviews(data.reviews) 
+            setFavorite(data.isFavorite)
+            setReviews(data.reviews)     
           })
       }, [movieId]) 
-
 
       const openModal = () => {
          setIsOpen(true)
@@ -33,6 +34,8 @@ const [reviews, setReviews] = useState([])
      const handleChange = e => {
           setMovieReview(e.target.value)
      }
+
+
 
     const submitHandler = e => {
         e.preventDefault();
@@ -77,10 +80,15 @@ const [reviews, setReviews] = useState([])
           <div className="details">
             <div className="poster-container">
               <img src={movie.poster} className="detail-img" />
+              <div className="fav-card">
+                  <i className={favorite ? "ri-heart-fill" : "ri-heart-line"} 
+                     onClick={() => updateFavorite(movie.id)}
+                  /> 
+                </div>
             </div>
 
             <div className="about">
-              <h1>{movie.title}</h1>
+                  <h1>{movie.title}</h1>
 
               <div className="info">
                 <p className="genre">{movie.genre}</p>

@@ -123,6 +123,22 @@ header {
   color: #b8c1ec;
   align-self: end;
   justify-self: end;
+  cursor: pointer;
+  width: 32px;
+  height: 30px;
+}
+
+.fav-card {
+ position: relative;
+ top: -47px;
+ left: 360px;
+ width: 40px;
+ height: 40px;
+ background-color: #232946;
+ border-top-left-radius: 5px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .movieLogo {
@@ -140,7 +156,7 @@ header {
   justify-self: end;
 }
 
-.ri-file-list-fill {
+.fav-fill-heart{
   font-size: 3em;
   color: #b8c1ec;
 }
