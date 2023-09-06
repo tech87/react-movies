@@ -93,9 +93,9 @@ export default function MovieDetails() {
           </div>
           <h4>Summary</h4>
           <p className="summary">{movie.summary}</p>
-          <p onClick={() => openModal()} className="trailer">
+          <button onClick={() => openModal()} className="trailer">
             Trailer
-          </p>
+          </button>
           <Modal open={isOpen} movie={movie} onClose={closeModal} />
         </div>
       </div>
