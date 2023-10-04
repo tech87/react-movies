@@ -17,7 +17,7 @@ const updateSearch = (e) => {
       <div className='searchContainer'>
 
       <input type='search' 
-             placeholder='  Search movie'
+             placeholder=' Search movie'
              onChange={(e) => props.onSearchChange(e.target.value)}
              value={props.searchField}
              />
@@ -25,7 +25,7 @@ const updateSearch = (e) => {
       </div>
              
       <div>
-      <label className='movie-genre' htmlFor="genre">Genre: </label>
+      {/* <label className='movie-genre' htmlFor="genre">Genre: </label> */}
         <select name="genre" id="genre" onChange={(e)=> props.onSelectChange(e.target.value)}>
             <option value="reset"> -- All genres -- </option>
             <option value="crime">Crime</option>
