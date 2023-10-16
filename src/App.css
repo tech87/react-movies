@@ -120,25 +120,12 @@ header {
   grid-row: 4;
   grid-column: 3 / -2;
   font-size: 2em;
-  color: #b8c1ec;
+  color: #8b96ce;
   align-self: end;
   justify-self: end;
   cursor: pointer;
   width: 32px;
   height: 30px;
-}
-
-.fav-card {
- position: relative;
- top: -47px;
- left: 360px;
- width: 40px;
- height: 40px;
- background-color: #232946;
- border-top-left-radius: 5px;
- display: flex;
- justify-content: center;
- align-items: center;
 }
 
 .movieLogo {
@@ -271,8 +258,8 @@ form {
   line-height: 1.5em;
 }
 
-h1 {
-  font-size: 3em;
+.about > h1 {
+  font-size: 2em;
 }
 
 .filter {
@@ -367,7 +354,7 @@ option {
 }
 
 .summary {
-  margin-top: -20px;
+  margin-top: -15px;
    line-height: 1.5em;
 }
 
@@ -399,6 +386,17 @@ option {
 .movieCast {
   display: flex;
   flex-direction: row;
+}
+
+.summary-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-container > i {
+  color: #232946;
+  align-items: flex-end;
+  font-size: 1.75em;
 }
 
 ul.actors {
@@ -476,7 +474,7 @@ h4 {
 
 .closeBtn {
   position: fixed;
-  top: 0px;
+  top: -25px;
   right: 0px;
   font-size: 1em;
   cursor: pointer;
@@ -589,6 +587,19 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+  .closeBtn {
+    right: 12px;
+  }
+  .btn {
+    position: absolute;
+    bottom: 45px;
+    right: 80px;
+    padding: 0.75rem 1rem;
+    background-color: #fffffe;
+    color: #232946;
+    border-top-left-radius: .7rem;
+    font-weight: bold;
   }
 }
 
@@ -771,6 +782,19 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+  .btn {
+    position: absolute;
+    bottom: 45px;
+    right: 80px;
+    padding: 0.75rem 1rem;
+    background-color: #fffffe;
+    color: #232946;
+    border-top-left-radius: .7rem;
+    font-weight: bold;
+  }
+  .genre {
+    width: 120px;
   }
 }
 

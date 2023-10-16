@@ -62,17 +62,10 @@ export default function MovieDetails() {
       <div className="details">
         <div className="poster-container">
           <img src={movie.poster} className="detail-img" />
-          <div className="fav-card">
-            <i
-              className={favorite ? "ri-heart-fill" : "ri-heart-line"}
-              onClick={() => updateFavorite(movie.id)}
-            />
-          </div>
         </div>
 
         <div className="about">
-          <h1>{movie.title}</h1>
-
+             <h1>{movie.title}</h1>             
           <div className="info">
             <p className="genre">{movie.genre}</p>
             <p className="genre">
@@ -91,7 +84,13 @@ export default function MovieDetails() {
                 : null}
             </ul>
           </div>
-          <h4>Summary</h4>
+          <div className="summary-container"> 
+             <h4>Summary</h4>
+             {<i
+                className={favorite ? "ri-heart-fill" : "ri-heart-line"}
+                onClick={() => updateFavorite(movie.id)}
+                /> }
+          </div>
           <p className="summary">{movie.summary}</p>
           <button onClick={() => openModal()} className="trailer">
             Trailer
