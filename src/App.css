@@ -601,6 +601,9 @@ h4 {
     border-top-left-radius: .7rem;
     font-weight: bold;
   }
+  .img-container:hover .btn {
+    transform: none;
+  }
 }
 
 /* Small screen devices (600px and above) */
@@ -792,6 +795,9 @@ h4 {
     color: #232946;
     border-top-left-radius: .7rem;
     font-weight: bold;
+  }
+  .img-container:hover .btn {
+    transform: none;
   }
   .genre {
     width: 120px;
