@@ -16,7 +16,7 @@ const updateSearch = (e) => {
     >
       <div className='searchContainer'>
 
-      <input type='search' 
+      <input type='text' 
              placeholder=' Search movie'
              onChange={(e) => props.onSearchChange(e.target.value)}
              value={props.searchField}

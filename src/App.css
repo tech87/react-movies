@@ -504,7 +504,7 @@ h4 {
   }
 
   ::placeholder {
-    text-indent: 3px;
+    text-indent: 0px;
     color: #232946;
   }
 
@@ -615,7 +615,7 @@ h4 {
   }
 
   ::placeholder {
-    text-indent: 3px;
+    text-indent: 0px;
     color: #232946;
   }
 
@@ -734,7 +734,7 @@ h4 {
   }
 
   ::placeholder {
-    text-indent: 3px;
+    text-indent: 0px;
     color: #232946;
   }
 
