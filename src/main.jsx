@@ -6,7 +6,6 @@ import {
   Route,
 } from "react-router-dom";
 import App from './App'
-import MovieList from './components/MovieList';
 import './index.css'
 import Root from './routes/Root';
 import MovieDetails from './components/MovieDetails'

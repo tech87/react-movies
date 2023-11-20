@@ -15,9 +15,9 @@ function App() {
       setMovies(data);
       setFilteredMovies(data);
     }
-
     fetchData();
   }, []);
+
 
   const onSearchChange = (value) => {
     setSearchField(value);

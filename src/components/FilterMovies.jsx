@@ -24,7 +24,7 @@ const updateSearch = (e) => {
              {props.searchField.length > 0 && <button onClick={updateSearch}>&times;</button>}
       </div>
              
-      <div>
+      <div className='genre-container'>
         <select name="genre" id="genre" onChange={(e)=> props.onSelectChange(e.target.value)}>
             <option value="reset"> -- All genres -- </option>
             <option value="crime">Crime</option>

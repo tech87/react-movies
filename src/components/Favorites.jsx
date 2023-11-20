@@ -10,20 +10,33 @@ function Favorites() {
       const data = await getFavoriteMovies();
       setMovies(data);
     }
-
     fetchData();
-  }, []);
+  }, [movies]);
+
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      exit={{ opacity: 0 }}
+      exit={{ opacity: 0 }}s
     >
-      {movies && <MovieList movies={movies} />}
+      {movies <= 0 ? <h2>Your list is empty!</h2> : <MovieList movies={movies}/>}
     </motion.div>
   );
 }
 
 export default Favorites;
+
+
+/* .filter {
+  position: fixed;
+  top: 2px;
+  width: 450px;
+  height: 70px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 10;
+}  */

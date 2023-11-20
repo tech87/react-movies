@@ -5,7 +5,6 @@ import useFavoriteMovie from "./useFavoriteMovie";
 
 
 function Movies(props) {
-    /* const [favorite, handleFavorite] = useFavoriteMovie() */
     const [favorite, ,updateFavorite] = useFavoriteMovie(props.movie.isFavorite)
     const filledHeart = "ri-heart-fill"
     const emptyHeart = "ri-heart-line"
