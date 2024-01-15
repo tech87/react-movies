@@ -1,15 +1,15 @@
-import {  useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import Modal from "./Modal";
-import { motion } from "framer-motion"
-import useFavoriteMovie from "./useFavoriteMovie";
-import { getMovie, updateMovie } from "../database/db";
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import Modal from './Modal';
+import { motion } from 'framer-motion';
+import useFavoriteMovie from './useFavoriteMovie';
+import { getMovie, updateMovie } from '../database/db';
 
 export default function MovieDetails() {
   const { movieId } = useParams();
   const [movie, setMovie] = useState({});
   const [isOpen, setIsOpen] = useState(false);
-  const [movieReview, setMovieReview] = useState("");
+  const [movieReview, setMovieReview] = useState('');
   const [reviews, setReviews] = useState([]);
   const [favorite, setFavorite, updateFavorite] = useFavoriteMovie();
 
@@ -42,7 +42,7 @@ export default function MovieDetails() {
     setReviews((prevState) => {
       return [movieReview, ...prevState];
     });
-    setMovieReview("");
+    setMovieReview('');
   };
 
   const deleteReview = async (review) => {
@@ -65,7 +65,7 @@ export default function MovieDetails() {
         </div>
 
         <div className="about">
-             <h1>{movie.title}</h1>             
+          <h1>{movie.title}</h1>
           <div className="info">
             <p className="genre">{movie.genre}</p>
             <p className="genre">
@@ -84,12 +84,14 @@ export default function MovieDetails() {
                 : null}
             </ul>
           </div>
-          <div className="summary-container"> 
-             <h4>Summary</h4>
-             {<i
-                className={favorite ? "ri-heart-fill" : "ri-heart-line"}
+          <div className="summary-container">
+            <h4>Summary</h4>
+            {
+              <i
+                className={favorite ? 'ri-heart-fill' : 'ri-heart-line'}
                 onClick={() => updateFavorite(movie.id)}
-                /> }
+              />
+            }
           </div>
           <p className="summary">{movie.summary}</p>
           <button onClick={() => openModal()} className="trailer">

@@ -1,11 +1,11 @@
-import Dexie from "dexie";
-import data from "./data";
+import Dexie from 'dexie';
+import data from './data';
 
-export const db = new Dexie("movies");
+export const db = new Dexie('movies');
 
 export function initDb() {
   db.version(1).stores({
-    movies: "++id, title, isFavorite", // Primary key and indexed props
+    movies: '++id, title, isFavorite' // Primary key and indexed props
   });
 }
 
@@ -52,7 +52,7 @@ export async function getFavoriteMovies() {
 
 export async function getMovie(id) {
   try {
-    return await db.movies.where("id").equals(+id).first();
+    return await db.movies.where('id').equals(+id).first();
   } catch (e) {
     console.error(`Error trying to get movies: ${e.message}`);
   }

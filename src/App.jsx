@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import MovieList from "./components/MovieList";
-import FilterMovies from "./components/FilterMovies";
-import { getMovies } from "./database/db";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import MovieList from './components/MovieList';
+import FilterMovies from './components/FilterMovies';
+import { getMovies } from './database/db';
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [searchField, setSearchField] = useState("");
+  const [searchField, setSearchField] = useState('');
   const [filteredMovies, setFilteredMovies] = useState([]);
 
   useEffect(() => {
@@ -17,7 +17,6 @@ function App() {
     }
     fetchData();
   }, []);
-
 
   const onSearchChange = (value) => {
     setSearchField(value);
@@ -31,7 +30,7 @@ function App() {
   const onSelectChange = (value) => {
     setFilteredMovies(
       movies.filter((movie) => {
-        return value === "reset" ? true : movie.genre.includes(value);
+        return value === 'reset' ? true : movie.genre.includes(value);
       })
     );
   };

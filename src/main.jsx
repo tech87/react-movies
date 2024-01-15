@@ -1,17 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-} from "react-router-dom";
-import App from './App'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import App from './App';
+import './index.css';
 import Root from './routes/Root';
-import MovieDetails from './components/MovieDetails'
+import MovieDetails from './components/MovieDetails';
 import Favorites from './components/Favorites';
-import Manage from "./components/Manage";
-import { initDb, seed } from "./database/db";
+import Manage from './components/Manage';
+import { initDb, seed } from './database/db';
 
 // We create the database store and seed it with data
 initDb();
@@ -20,31 +16,31 @@ await seed();
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Root />,
     children: [
       {
-        path: "/",
-        element: <App />,
+        path: '/',
+        element: <App />
       },
       {
-        path: "/:movieId",
-        element: <MovieDetails />,
+        path: '/:movieId',
+        element: <MovieDetails />
       },
       {
-        path: "/favorites",
-        element: <Favorites />,
+        path: '/favorites',
+        element: <Favorites />
       },
       // If you want to clear data and restart, you go here
       {
-        path: "/manage",
-        element: <Manage />,
-      },
-    ],
-  },
+        path: '/manage',
+        element: <Manage />
+      }
+    ]
+  }
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
