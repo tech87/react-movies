@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext } from 'react';
 import { getFavoriteMovies } from '../database/db';
 
 export const MoviesContext = createContext({
@@ -22,5 +22,5 @@ export default function CustomMovieProvider({ children }) {
     <MoviesContext.Provider value={{ favoritesCount, setFavoritesCount }}>
       {children}
     </MoviesContext.Provider>
-  )
-  }
+  );
+}
