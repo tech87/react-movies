@@ -27,16 +27,3 @@ function Favorites() {
 }
 
 export default Favorites;
-
-
-/* .filter {
-  position: fixed;
-  top: 2px;
-  width: 450px;
-  height: 70px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 10;
-}  */
